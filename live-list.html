@@ -22,18 +22,58 @@
             <h1 id="welcome">Welcome </h1>
     </div>
 
-    <div class="container tasks-main">
+    <div class="container-fluid tasks-main">
         <div class="row">
-            <div class="col-lg-1 border-white">
+            <div class="col-lg-2 border-white">
                 <h4 class="text-white">Date:</h4>
             </div>
             <div class="col-lg-3 border-white">
                 <h4 class="text-white">Task:</h4>
             </div>
-            <div class="col-lg-8 border-white">
+            <div class="col-lg-7 border-white">
                 <h4 class="text-white">Details:</h4>
             </div>
         </div><!--row-->
+        <div class="row">
+            <div class="col-lg-2"><p class="text-white">Past Due:</p></div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2"><p class="text-white"><p id="0" class="text-white"></p></p></div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2"><p class="text-white"><p id="1" class="text-white"></p></p></div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2"><p class="text-white"><p id="2" class="text-white"></p></p></div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2"><p class="text-white"><p id="3" class="text-white"></p></p></div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2"><p class="text-white"><p id="4" class="text-white"></p></p></div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2"><p class="text-white"><p id="5" class="text-white"></p></p></div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-5"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2"><p class="text-white"><p id="6" class="text-white"></p></p></div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-5"></div>
+        </div>
     </div><!--container-->
 
    
@@ -44,6 +84,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="search.js"></script>
+    <script src="load-dates.js"></script>
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
@@ -54,6 +95,7 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-functions.js"></script>
     <script>
       // Your web app's Firebase configuration
       var firebaseConfig = {
