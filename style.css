@@ -1,0 +1,96 @@
+body{
+    background-image: url("images/starfield.png") !important;
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+	display: block;
+	left: 0;
+    top: 0;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body{
+    background-color: #262f3d;
+}
+
+.top-bar{
+	width: 100%;
+	background-color: white;
+	height: 65px;
+	z-index: 99;
+	margin-bottom: 75px;
+}
+
+.title-blue{
+	color: #243360;
+	font-family: 'Play', sans-serif;
+	font-weight: 700;
+	line-height: 1.75em;
+	display: inline;
+}
+
+.live-list-logo{
+	margin: 25px;
+	height:200px;
+}
+
+.live-list-logo-small{
+	margin: 10px;
+	height: 50px;
+	display: inline;
+	float: left;
+}
+
+.center{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bad-login{
+    display: none;
+}
+
+#bad-password{
+    display: none;
+}
+
+.divider{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+#sign-out{
+	float: right;
+	display: inline;
+	margin: 10px;
+}
+
+#welcome-box{
+	position: absolute;
+	width: 70%;
+	top: 15px;
+	left: 0;
+	right: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 999;
+}
+
+#welcome{
+	color: #243360;
+	font-family: 'Play', sans-serif;
+	font-weight: 700;
+	font-size: 1.5em;
+}
+
+.border-white{
+	border-style: solid;
+	border-color: white;
+	border-width: 3px;
+}
