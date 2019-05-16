@@ -89,6 +89,75 @@ body{
 	font-size: 1.5em;
 }
 
-.border-white{
+.border-bottom-white{
 	border-bottom: solid white 3px;
 }
+
+.border-top-white{
+	border-top: solid white 3px;
+}
+
+.border-left-white{
+	border-left: solid white 3px;
+}
+
+#add-task{
+	width: 25%;
+	font-family: 'Play', sans-serif;
+	font-size: 1.5em;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 25px;
+}
+
+.button-box{
+	width: 100%;
+}
+
+.detail-box{
+	height: 200px;
+}
+
+.tasks-box{
+	max-height: 472px;
+}
+
+.detail-item{
+	line-height: 3em;
+	margin-left: 150px;
+}
+
+.detail-item-text{
+	margin-left: 150px;
+}
+
+.detail-item-box{
+	display: inline;
+}
+
+.add-task{
+	background-color: white;
+	position: fixed;
+	top: 200px;
+	left: 25%;
+	width: 50%;
+	display: none;
+	
+}
+
+.text-blue{
+	color: #243360;
+}
+
+#submit-task{
+	width: 25%;
+	font-family: 'Play', sans-serif;
+	font-size: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+

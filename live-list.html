@@ -24,57 +24,101 @@
 
     <div class="container-fluid tasks-main">
         <div class="row">
-            <div class="col-lg-2 border-white">
+            <div class="col-lg-4 border-bottom-white">
                 <h4 class="text-white">Date:</h4>
             </div>
-            <div class="col-lg-3 border-white">
+            <div class="col-lg-6 border-bottom-white border-left-white">
                 <h4 class="text-white">Task:</h4>
             </div>
-            <div class="col-lg-7 border-white">
-                <h4 class="text-white">Details:</h4>
+            <div class="col-lg-2 border-bottom-white">
+                <h4 class="text-white">Status:</h4>
             </div>
         </div><!--row-->
+        <div class="tasks-box">
         <div class="row">
-            <div class="col-lg-2"><p class="text-white">Past Due:</p></div>
-            <div class="col-lg-3"></div>
-            <div class="col-lg-5"></div>
+            <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="past-due" class="text-white">Past Due:</p></p></div>
+            <div class="col-lg-6 border-bottom-white border-left-white"></div>
+            <div class="col-lg-2 border-bottom-white border-left-white"></div>
         </div>
         <div class="row">
-            <div class="col-lg-2"><p class="text-white"><p id="0" class="text-white"></p></p></div>
-            <div class="col-lg-3"></div>
-            <div class="col-lg-5"></div>
+            <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="0" class="text-white"></p></p></div>
+            <div class="col-lg-6 border-bottom-white border-left-white"></div>
+            <div class="col-lg-2 border-bottom-white border-left-white"></div>
         </div>
         <div class="row">
-            <div class="col-lg-2"><p class="text-white"><p id="1" class="text-white"></p></p></div>
-            <div class="col-lg-3"></div>
-            <div class="col-lg-5"></div>
+            <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="1" class="text-white"></p></p></div>
+            <div class="col-lg-6 border-bottom-white border-left-white"></div>
+            <div class="col-lg-2 border-bottom-white border-left-white"></div>
         </div>
         <div class="row">
-            <div class="col-lg-2"><p class="text-white"><p id="2" class="text-white"></p></p></div>
-            <div class="col-lg-3"></div>
-            <div class="col-lg-5"></div>
+            <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="2" class="text-white"></p></p></div>
+            <div class="col-lg-6 border-bottom-white border-left-white"></div>
+            <div class="col-lg-2 border-bottom-white border-left-white"></div>
         </div>
         <div class="row">
-            <div class="col-lg-2"><p class="text-white"><p id="3" class="text-white"></p></p></div>
-            <div class="col-lg-3"></div>
-            <div class="col-lg-5"></div>
+            <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="3" class="text-white"></p></p></div>
+            <div class="col-lg-6 border-bottom-white border-left-white"></div>
+            <div class="col-lg-2 border-bottom-white border-left-white"></div>
         </div>
         <div class="row">
-            <div class="col-lg-2"><p class="text-white"><p id="4" class="text-white"></p></p></div>
-            <div class="col-lg-3"></div>
-            <div class="col-lg-5"></div>
+            <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="4" class="text-white"></p></p></div>
+            <div class="col-lg-6 border-bottom-white border-left-white"></div>
+            <div class="col-lg-2 border-bottom-white border-left-white"></div>
         </div>
         <div class="row">
-            <div class="col-lg-2"><p class="text-white"><p id="5" class="text-white"></p></p></div>
-            <div class="col-lg-3"></div>
-            <div class="col-lg-5"></div>
+            <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="5" class="text-white"></p></p></div>
+            <div class="col-lg-6 border-bottom-white border-left-white"></div>
+            <div class="col-lg-2 border-bottom-white border-left-white"></div>
         </div>
         <div class="row">
-            <div class="col-lg-2"><p class="text-white"><p id="6" class="text-white"></p></p></div>
-            <div class="col-lg-3"></div>
-            <div class="col-lg-5"></div>
+            <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="6" class="text-white"></p></p></div>
+            <div class="col-lg-6 border-bottom-white border-left-white"></div>
+            <div class="col-lg-2 border-bottom-white border-left-white"></div>
+        </div>
+        </div>
+        <div class="row border-bottom-white detail-box">
+            <h4 id="detail-title" class="text-white">Details:</h4>
+           
+                <div class="detail-item-box">
+                        <h6 class="detail-item text-white">Due:</h6>
+                        <p class="detail-item-text text-white" contenteditable="true">Date</p> 
+                </div>
+                <div class="detail-item-box">
+                        <h6 class="detail-item text-white">Task:</h6>
+                        <p class="detail-item-text text-white" contenteditable="true">Do This</p>
+                </div>
+                <div class="detail-item-box">
+                    <h6 class="detail-item text-white">Notes:</h6>
+                    <p class="detail-item-text text-white" contenteditable="true">Dont Forget That</p>
+                </div>
+                <div class="detail-item-box">
+                        <h6 class="detail-item text-white">Status</h6>
+                        <a href="javascript: void(0)"><p class="detail-item-text text-white"></p></a>
+                    </div>
+                
+            <div class="add-task">
+                    <div class="detail-item-box">
+                            <h6 class="detail-item text-blue">Due:</h6>
+                            <p class="detail-item-text text-blue" contenteditable="true">Enter Month (numeral):</p>
+                            <p class="detail-item-text text-blue" contenteditable="true">Enter Day (numeral):</p>
+                            <p class="detail-item-text text-blue" contenteditable="true">Enter Year (numeral):</p>   
+                    </div>
+                    <div class="detail-item-box">
+                            <h6 class="detail-item text-blue">Task:</h6>
+                            <p class="detail-item-text text-blue" contenteditable="true">Enter Task</p>
+                    </div>
+                    <div class="detail-item-box">
+                        <h6 class="detail-item text-blue">Notes:</h6>
+                        <p class="detail-item-text text-blue" contenteditable="true">Add Notes Here (optional)</p>
+                    </div>
+                    <button id="submit-task" class="btn btn-dark">Submit Task</button>
+                
+            </div>
         </div>
     </div><!--container-->
+    <div class="button-box">
+    <button id="add-task" class="btn btn-dark">Add New Task</button>
+    </div>
 
    
 
