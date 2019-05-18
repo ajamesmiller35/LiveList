@@ -99,17 +99,17 @@
             <div class="add-task">
                     <div class="detail-item-box">
                             <h6 class="detail-item text-blue">Due:</h6>
-                            <p class="detail-item-text text-blue" contenteditable="true">Enter Month (numeral):</p>
-                            <p class="detail-item-text text-blue" contenteditable="true">Enter Day (numeral):</p>
-                            <p class="detail-item-text text-blue" contenteditable="true">Enter Year (numeral):</p>   
+                            <p id="month" class="detail-item-text text-blue" contenteditable="true">Enter Month (numeral):</p>
+                            <p id="day" class="detail-item-text text-blue" contenteditable="true">Enter Day (numeral):</p>
+                            <p id="year" class="detail-item-text text-blue" contenteditable="true">Enter Year (numeral):</p>   
                     </div>
                     <div class="detail-item-box">
                             <h6 class="detail-item text-blue">Task:</h6>
-                            <p class="detail-item-text text-blue" contenteditable="true">Enter Task</p>
+                            <p id="task" class="detail-item-text text-blue" contenteditable="true">Enter Task</p>
                     </div>
                     <div class="detail-item-box">
                         <h6 class="detail-item text-blue">Notes:</h6>
-                        <p class="detail-item-text text-blue" contenteditable="true">Add Notes Here (optional)</p>
+                        <p id="notes" class="detail-item-text text-blue" contenteditable="true">Add Notes Here (optional)</p>
                     </div>
                     <button id="submit-task" class="btn btn-dark">Submit Task</button>
                 
@@ -124,11 +124,12 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="search.js"></script>
     <script src="load-dates.js"></script>
+    
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
@@ -140,6 +141,7 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-functions.js"></script>
+    
     <script>
       // Your web app's Firebase configuration
       var firebaseConfig = {
@@ -153,6 +155,9 @@
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
+      var db = firebase.firestore();
+
+      
 
       firebase.auth().onAuthStateChanged(function(user) {
            console.log(user);
@@ -170,6 +175,10 @@
        });
        });
 
+       
+
     </script>
+    <script src="add-task.js"></script>
+    <script src="load-tasks.js"></script>
   </body>
 </html>
