@@ -3,7 +3,7 @@ $(document).on('click', '.task', function(event){
 
     taskRef.get().then(function(doc) {
         if (doc.exists) {
-            console.log("Document data:", doc.data());
+            //console.log("Document data:", doc.data());
             $('#month-detail').html(doc.data().month);
             $('#day-detail').html(doc.data().day);
             $('#year-detail').html(doc.data().year);

@@ -16,12 +16,13 @@ db.collection("tasks").get().then(function(querySnapshot) {
         console.log(day);
         console.log(doc.data().year);
         console.log(year);
+        console.log(doc.data().task);
 
         // doc.data() is never undefined for query doc snapshots
         if((((doc.data().day < day) && (doc.data().month < month)) || (doc.data().year < year)) && (doc.data().status == 'incomplete')){
         console.log(doc.id, " => ", doc.data());
         
-            $('#past-due-tasks').append('<img id="' + doc.data().id + '" class="status-box" src="images/box.png"/>' + '<p class="text-white task">' + doc.data().task + '</p>');
+            $('#past-due-tasks').append('<img id="' + doc.data().id + '" class="status-box" src="images/box.png"/>' + '<p id="' + doc.data().id + '" class="text-white task">' + doc.data().task + '</p>');
        
         }
         else if((doc.data().day == day) && (doc.data().month == month) && (doc.data().year == year)){
