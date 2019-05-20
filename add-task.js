@@ -5,13 +5,20 @@ $(document).on('click', '#add-task', function(event){
 });
 
 $(document).on('click', '#submit-task', function(event){
-    var month = $('#month').html();
-    var day = $('#day').html();
-    var year = $('#year').html();
+    event.preventDefault();
 
-    var task = $('#task').html();
+    var month = $('#inputMonth').val();
+    var day = $('#inputDay').val();
+    var year = $('#inputYear').val();
 
-    var notes = $('#notes').html();
+    var task = $('#inputTask').val();
+
+    var notes = $('#inputNotes').val();
+
+    var priority = $('#highPriority').val();
+
+    var ID = Date.now().toString();
+
 
     console.log(month);
     console.log(day);
@@ -19,16 +26,20 @@ $(document).on('click', '#submit-task', function(event){
     console.log(task);
     console.log(notes);
 
-    // Add a new document in collection "cities"
-   db.collection("tasks").doc(task).set({
+    // Add a new document in collection "tasks"
+   db.collection("tasks").doc(ID).set({
+    id: ID,
     month: month,
     day: day,
     year: year,
     task: task,
-    notes, notes
+    notes: notes,
+    priority: priority,
+    status: "incomplete"
 })
 .then(function() {
     console.log("Document successfully written!");
+    location.reload();
 })
 .catch(function(error) {
     console.error("Error writing document: ", error);

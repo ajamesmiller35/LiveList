@@ -15,6 +15,62 @@ body{
     background-color: #262f3d;
 }
 
+.status-box{
+	width: 45px;
+	float: left;
+	display: block;
+}
+
+.task{
+	font-family: 'Play', sans-serif;
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+.HIGH{
+	font-family: 'Play', sans-serif;
+	font-weight: 700;
+	color: red;
+}
+
+.NORMAL{
+	font-family: 'Play', sans-serif;
+	font-weight: 700;
+	color: green;
+}
+
+.pop-up{
+	padding: 25px;
+	border: solid #243360 15px;
+}
+
+#close{
+	width: 30px;
+}
+
+#close-anchor{
+	top: 25px;
+	right: 25px;
+	position: absolute;
+}
+
+.date-item{
+	margin-left: 1em;
+	display: inline;
+}
+
+#completed-tasks{
+	float: left;
+	font-family: 'Play', sans-serif;
+	font-weight: 700;
+}
+
+#future-tasks{
+	float: right;
+	font-family: 'Play', sans-serif;
+	font-weight: 700;
+}
+
 .top-bar{
 	width: 100%;
 	background-color: white;
@@ -97,9 +153,6 @@ body{
 	border-top: solid white 3px;
 }
 
-.border-left-white{
-	border-left: solid white 3px;
-}
 
 #add-task{
 	width: 25%;
@@ -116,11 +169,13 @@ body{
 }
 
 .detail-box{
-	height: 200px;
+	height: 225px;
 }
 
 .tasks-box{
 	max-height: 472px;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .detail-item{
@@ -159,5 +214,14 @@ body{
 	display: block;
 	margin-top: 25px;
 	margin-bottom: 25px;
+}
+
+#update-task{
+	width: 25%;
+	font-family: 'Play', sans-serif;
+	font-size: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 

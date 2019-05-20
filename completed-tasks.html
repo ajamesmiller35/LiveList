@@ -29,7 +29,7 @@
     <div class="container-fluid tasks-main">
         <div class="row">
             <div class="col-lg-4 border-bottom-white">
-                <h4 class="text-white">Next Seven Days:</h4>
+                <h4 class="text-white">Original Due Date:</h4>
             </div>
             <div class="col-lg-8 border-bottom-white">
                 <h4 class="text-white">Task:</h4>
@@ -39,41 +39,6 @@
         <div class="row">
             <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="past-due" class="text-white">Past Due:</p></p></div>
             <div id="past-due-tasks" class="col-lg-8 border-bottom-white"></div>
-            
-        </div>
-        <div class="row">
-            <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="0" class="text-white"></p></p></div>
-            <div id="0task" class="col-lg-8 border-bottom-white"></div>
-            
-        </div>
-        <div class="row">
-            <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="1" class="text-white"></p></p></div>
-            <div id="1task" class="col-lg-8 border-bottom-white"></div>
-            
-        </div>
-        <div class="row">
-            <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="2" class="text-white"></p></p></div>
-            <div id="2task" class="col-lg-8 border-bottom-white"></div>
-            
-        </div>
-        <div class="row">
-            <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="3" class="text-white"></p></p></div>
-            <div id="3task" class="col-lg-8 border-bottom-white"></div>
-            
-        </div>
-        <div class="row">
-            <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="4" class="text-white"></p></p></div>
-            <div id="4task" class="col-lg-8 border-bottom-white"></div>
-            
-        </div>
-        <div class="row">
-            <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="5" class="text-white"></p></p></div>
-            <div id="5task" class="col-lg-8 border-bottom-white"></div>
-            
-        </div>
-        <div class="row">
-            <div class="col-lg-4 border-bottom-white"><p class="text-white"><p id="6" class="text-white"></p></p></div>
-            <div id="6task" class="col-lg-8 border-bottom-white"></div>
             
         </div>
         </div>
@@ -121,81 +86,9 @@
                     <button id="update-task" class="btn btn-dark">Update Task</button>
                 </div>
                 
-            <div class="add-task">
-                    <!--<div class="detail-item-box">
-                            <h6 class="detail-item text-blue">Due:</h6>
-                            <p id="month" class="detail-item-text text-blue" contenteditable="true">Enter Month (numeral):</p>
-                            <p id="day" class="detail-item-text text-blue" contenteditable="true">Enter Day (numeral):</p>
-                            <p id="year" class="detail-item-text text-blue" contenteditable="true">Enter Year (numeral):</p>   
-                    </div>
-                    <div class="detail-item-box">
-                            <h6 class="detail-item text-blue">Task:</h6>
-                            <p id="task" class="detail-item-text text-blue" contenteditable="true">Enter Task</p>
-                    </div>
-                    <div class="detail-item-box">
-                        <h6 class="detail-item text-blue">Notes:</h6>
-                        <p id="notes" class="detail-item-text text-blue" contenteditable="true">Add Notes Here (optional)</p>
-                    </div>
-                    <button id="submit-task" class="btn btn-dark">Submit Task</button>
-                </div>-->
-                <form class="pop-up">
-                    <a id="close-anchor" href="javascript:void(0)"><img id="close" src="images/close-icon.png"></a>
-                    <script>
-                        $(document).on('click', '#close-anchor', function(event){
-                            $('.add-task').css('display', 'none');
-                        });
-                    </script>
-                    <h4>Due:</h4>
-                    <div class="form-row">   
-                        <div class="form-group col-md-4">
-                            <label for="inputMonth">Month</label>
-                            <input type="text" class="form-control" id="inputMonth" placeholder="1">
-                          </div>
-                          <div class="form-group col-md-4">
-                            <label for="inputDay">Day</label>
-                            <input type="text" class="form-control" id="inputDay" placeholder="1">
-                          </div>
-                          <div class="form-group col-md-4">
-                            <label for="inputYear">Year</label>
-                            <input type="text" class="form-control" id="inputYear" placeholder="2019">
-                          </div>
-                    </div>
-                    <h4>Task:</h4>
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <input type="text" class="form-control" id="inputTask" placeholder="Enter task...">
-                        </div>
-                    </div>
-                    <h4>Notes:</h4>
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <input type="text" class="form-control" id="inputNotes" placeholder="Enter notes...">
-                        </div>
-                    </div>
-                    <div class="custom-control custom-switch">
-                            <input type="checkbox" value="0" class="custom-control-input" id="highPriority">
-                            <label class="custom-control-label" for="highPriority">Toggle for HIGH PRIORITY</label>
-                            <script>
-                                $(document).on('click', '#highPriority', function(event){
-                                    if($('#highPriority').val() == 0){
-                                        $('#highPriority').attr('value', '1');
-                                        console.log($('#highPriority').val())
-                                    }
-                                    else{
-                                        $('#highPriority').attr('value', '0');
-                                        console.log($('#highPriority').val())
-                                    }
-                                });
-                            </script>
-                          </div>
-                    <button id="submit-task" class="btn btn-dark">Submit Task</button>
-                </form>
-            </div>
     </div><!--container-->
     <div class="button-box">
-        <a href="completed-tasks.html"><button id="completed-tasks" class="btn btn-dark"><-Completed Tasks</button></a>
-        <button id="future-tasks" class="btn btn-dark">All Future Tasks-></button>
-        <button id="add-task" class="btn btn-dark">Add New Task</button>
+        <a href="live-list.html"><button id="future-tasks" class="btn btn-dark">Tasks Main-></button></a>
     </div>
 
    
@@ -254,7 +147,7 @@
 
     </script>
     <script src="add-task.js"></script>
-    <script src="load-tasks.js"></script>
+    <script src="load-completed-tasks.js"></script>
     <script src="switch-status.js"></script>
     <script src="load-detail.js"></script>
   </body>
