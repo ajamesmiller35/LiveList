@@ -1,3 +1,28 @@
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+	
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 10px; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 10px; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }
+
+
+
 body{
     background-image: url("images/starfield.png") !important;
     background-repeat: no-repeat;
@@ -161,11 +186,12 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	margin-top: 25px;
+	
 }
 
 .button-box{
 	width: 100%;
+	margin-top: 25px;
 }
 
 .detail-box{
