@@ -13,6 +13,13 @@
     <title>LiveList!</title>
   </head>
   <body>
+    <script>
+        var dc = decodeURIComponent(document.cookie);  
+        var ca = dc.split(';');
+        var uid = ca[0];
+        console.log(uid);
+    </script>
+
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -194,7 +201,7 @@
     </div><!--container-->
     <div class="button-box">
         <a href="completed-tasks.html"><button id="completed-tasks" class="btn btn-dark"><-Completed Tasks</button></a>
-        <button id="future-tasks" class="btn btn-dark">All Future Tasks-></button>
+        <a href="all-future-tasks.html"><button id="future-tasks" class="btn btn-dark">All Future Tasks-></button></a>
         <button id="add-task" class="btn btn-dark">Add New Task</button>
     </div>
 
@@ -203,7 +210,7 @@
     <!-- Optional JavaScript -->
     
     <script src="search.js"></script>
-    <script src="load-dates.js"></script>
+    
     
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
@@ -243,6 +250,7 @@
        $(document).on('click', '#sign-out', function(event){
        firebase.auth().signOut().then(function() {
            // Sign-out successful.
+           document.cookie = "";
            window.location.href="index.html";
        }).catch(function(error) {
            // An error happened.
@@ -253,6 +261,7 @@
        
 
     </script>
+    <script src="load-dates.js"></script>
     <script src="add-task.js"></script>
     <script src="load-tasks.js"></script>
     <script src="switch-status.js"></script>

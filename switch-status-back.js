@@ -4,11 +4,11 @@ $(document).on('click', '.status-box', function(event){
     var statRef = db.collection(uid).doc(this.id);
 
     return statRef.update({
-        status: 'complete'
+        status: 'incomplete'
     })
     .then(function() {
         console.log("Document successfully updated!");
-        $("#" + thisID).attr('src', 'images/checked-box.png');
+        $("#" + thisID).attr('src', 'images/x-box.png');
         console.log("#" + thisID);
     })
     .catch(function(error) {

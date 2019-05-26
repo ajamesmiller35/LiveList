@@ -96,6 +96,12 @@ body{
 	font-weight: 700;
 }
 
+#future-tasks-left{
+	float: left;
+	font-family: 'Play', sans-serif;
+	font-weight: 700;
+}
+
 .top-bar{
 	width: 100%;
 	background-color: white;

@@ -96,9 +96,11 @@
 
     firebase.auth().onAuthStateChanged(function(user) {
         console.log(user);
+        console.log(user.uid);
 
         if(user != null){
-            window.location.href="live-list.html";
+          document.cookie = user.uid;
+          window.location.href="live-list.html";
         }
         else{
             //$('#bad-login').css('display', 'block');

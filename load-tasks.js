@@ -1,10 +1,10 @@
-db.collection("tasks").get().then(function(querySnapshot) {
+/*db.collection("tasks").get().then(function(querySnapshot) {
     var month = new Date();
     var day = new Date();
     var year = new Date();
     
 
-    month = month.getUTCMonth() + 1;
+    month = month.getUTCMonth()+1;
     day = day.getDate();
     year = year.getFullYear();
     
@@ -17,6 +17,7 @@ db.collection("tasks").get().then(function(querySnapshot) {
         console.log(doc.data().year);
         console.log(year);
         console.log(doc.data().task);
+        console.log(doc.data().id);
 
         // doc.data() is never undefined for query doc snapshots
         if((((doc.data().day < day) && (doc.data().month < month)) || (doc.data().year < year)) && (doc.data().status == 'incomplete')){
@@ -57,6 +58,6 @@ db.collection("tasks").get().then(function(querySnapshot) {
 
         }
     });
-});
+});*/
 
 

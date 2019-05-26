@@ -2,7 +2,7 @@
 var monthsText = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
 // Create a query against the collection.
-var query = db.collection("tasks").where("status", "==", "complete");
+var query = db.collection(uid).where("status", "==", "complete");
 
     query.get().then(function(querySnapshot){
 

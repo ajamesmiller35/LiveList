@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/LiveListLogo.png">
     <link href="https://fonts.googleapis.com/css?family=Play:700" rel="stylesheet">
     <title>LiveList! - Create Account</title>
   </head>
@@ -15,7 +16,7 @@
         <div class="container text-white">
                 <div class="row text-center">
                     <div class="center">
-                    <img class="firebase-logo" src="images/firebase-logo.png">
+                    <img class="live-list-logo" src="images/LiveListLogo.png">
                     <h1 class="title">LiveList!</h1>
                 </div>
                 </div>
@@ -112,12 +113,16 @@
     });
 
     firebase.auth().onAuthStateChanged(function(user) {
-        console.log(user);
-        console.log($('#sign-in-email').val());
-        console.log($('#sign-in-password').val());
+        console.log(user.uid);
+        document.cookie = user.uid;
+
+        var dc = decodeURIComponent(document.cookie);  
+        var ca = dc.split(';');
+        var uid = ca[0];
+        console.log(uid);
 
         if(user != null){
-            window.location.href="live-list.html";
+            //window.location.href="live-list.html";
         }
         else{
             //$('#bad-login').css('display', 'block');

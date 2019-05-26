@@ -14,11 +14,11 @@
   </head>
   <body>
         <script>
-                var dc = decodeURIComponent(document.cookie);  
-                var ca = dc.split(';');
-                var uid = ca[0];
-                console.log(uid);
-            </script>
+            var dc = decodeURIComponent(document.cookie);  
+            var ca = dc.split(';');
+            var uid = ca[0];
+            console.log(uid);
+        </script>
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -93,13 +93,12 @@
                 
     </div><!--container-->
     <div class="button-box">
-        <a href="live-list.html"><button id="future-tasks" class="btn btn-dark">Tasks Main-></button></a>
+        <a href="live-list.html"><button id="future-tasks-left" class="btn btn-dark"><-Tasks Main</button></a>
     </div>
 
    
 
     <!-- Optional JavaScript -->
-    
     
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
@@ -151,8 +150,8 @@
 
     </script>
     <script src="add-task.js"></script>
-    <script src="load-completed-tasks.js"></script>
-    <script src="switch-status-back.js"></script>
+    <script src="load-future-tasks.js"></script>
+    <script src="switch-status.js"></script>
     <script src="load-detail.js"></script>
   </body>
 </html>
