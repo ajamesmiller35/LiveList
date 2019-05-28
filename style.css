@@ -64,6 +64,55 @@ body{
 	color: green;
 }
 
+#date-warning{
+	display: none;
+}
+
+#date-success{
+	display: none;
+}
+
+#date-update-warning{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 25px;
+	padding: unset !important;
+	text-align: center;
+	margin-bottom:.25em !important;
+	display: none;
+}
+
+#date-update-success{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 25px;
+	padding: unset !important;
+	text-align: center;
+	margin-bottom:.25em !important;
+	display: none;
+}
+
+#task-update-warning{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 25px;
+	padding: unset !important;
+	text-align: center;
+	margin-bottom:.25em !important;
+	display: none;
+}
+
+#date-submit-warning{
+	display: none;
+}
+
+#task-warning{
+	display: none;
+}
+
 .pop-up{
 	padding: 25px;
 	border: solid #243360 15px;
@@ -201,7 +250,7 @@ body{
 }
 
 .detail-box{
-	height: 225px;
+	max-height: 275px;
 }
 
 .tasks-box{
@@ -255,5 +304,6 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+	margin-bottom: .5em;
 }
 

@@ -1,3 +1,5 @@
+var taskValid = false;
+
 $(document).on('click', '.task', function(event){
     var taskRef = db.collection(uid).doc(this.id);
 
@@ -9,6 +11,7 @@ $(document).on('click', '.task', function(event){
             $('#year-detail').html(doc.data().year);
             $('#task-detail').html(doc.data().task);
             $('#notes-detail').html(doc.data().notes);
+            dateValid = true;
             console.log(doc.data());
             //$('#highPriority2').attr('value', doc.data().priority);
 
@@ -17,6 +20,11 @@ $(document).on('click', '.task', function(event){
             }
 
         $(document).on('click', '#update-task', function(event){
+            if($('#task-detail').html()){
+                taskValid = true;
+            }
+            console.log("task value: " + $('#task-detail').html());
+            if(dateValid && taskValid){
             var month = $('#month-detail').html();
             var day = $('#day-detail').html();
             var year = $('#year-detail').html();
@@ -97,8 +105,15 @@ $(document).on('click', '.task', function(event){
                 // The document probably doesn't exist.
                 console.error("Error updating document: ", error);
             });
+        }
+        if(dateValid == false) {
+            $('#date-update-warning').css('display', 'block');
+        }
+        if(taskValid == false) {
+            $('#task-update-warning').css('display', 'block');
+        }
+        
         });
-
         } else {
             // doc.data() will be undefined in this case
             console.log("No such document!");
@@ -106,5 +121,6 @@ $(document).on('click', '.task', function(event){
     }).catch(function(error) {
         console.log("Error getting document:", error);
     });
+    
 });
 

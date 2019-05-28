@@ -1,11 +1,21 @@
-
+var taskStatus = false;
+$(document).on('keyup', function(event){
+    if($('#inputTask').val()){
+        taskStatus = true;
+        $('#task-warning').css('display', 'none');
+        console.log("task status: " + taskStatus);
+        console.log($('#inputTask').val());
+    }
+    });
 
 $(document).on('click', '#add-task', function(event){
     $('.add-task').css('display', 'block');
 });
 
 $(document).on('click', '#submit-task', function(event){
-    event.preventDefault();
+    event.preventDefault();    
+
+    if(dateValid && taskStatus){
 
     var month = $('#inputMonth').val();
     var day = $('#inputDay').val();
@@ -111,5 +121,17 @@ $(document).on('click', '#submit-task', function(event){
 });
 
     $('.add-task').css('display', 'none');
+}
+if(taskStatus == false){
+    console.log('Task required');
+    $('#task-warning').css('display', 'block');
+}
+if(dateValid == false){
+    console.log('date invalid');
+    $('#date-submit-warning').css('display', 'block');
+}
+else{
+    console.log('date false');
+}
 
 });

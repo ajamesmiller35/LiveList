@@ -86,7 +86,6 @@
         </div>
         <div class="border-bottom-white detail-box">
             <h4 id="detail-title" class="text-white">Details:</h4>
-           
             <div class="due-date-box row text-white">
                 <div class="col-lg-6">
                     <h5>Due:</h5> <p contenteditable="true" id="month-detail" class="date-item">Month</p> <p id="day-detail" contenteditable="true" class="date-item">Day</p> <p id="year-detail" contenteditable="true" class="date-item">Year</p>
@@ -120,13 +119,23 @@
             </div>
             <div class="due-date-box row text-white">
                     <div class="col-lg-6">
-                        <h5>Task:</h5> <p id="task-detail" contenteditable="true">Task</p>
+                        <h5>Task:</h5> 
+                        <p id="task-detail" contenteditable="true">Task</p>
                     </div>
                     <div class="col-lg-6">
                         <h5>Notes:</h5> <p id="notes-detail" contenteditable="true">Notes</p>
                     </div>
-                    <button id="update-task" class="btn btn-dark">Update Task</button>
                 </div>
+                <div id="date-update-warning" class="alert alert-danger" role="alert">
+                        Date invalid. Please enter a valid date.
+                </div>
+                <div id="date-update-success" class="alert alert-success" role="alert">
+                        Date valid.
+                </div>
+                <div id="task-update-warning" class="alert alert-danger" role="alert">
+                        Task can not be blank.
+                </div>
+                <button id="update-task" class="btn btn-dark">Update Task</button>
                 
             <div class="add-task">
                     <!--<div class="detail-item-box">
@@ -153,18 +162,24 @@
                         });
                     </script>
                     <h4>Due:</h4>
-                    <div class="form-row">   
+                    <div id="date-warning" class="alert alert-danger" role="alert">
+                            Date invalid. Please enter a valid date.
+                    </div>
+                    <div id="date-success" class="alert alert-success" role="alert">
+                            Date valid!
+                    </div>   
+                    <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="inputMonth">Month</label>
-                            <input type="text" class="form-control" id="inputMonth" placeholder="1">
+                            <input type="text" class="form-control monthInput" id="inputMonth" placeholder="1">
                           </div>
                           <div class="form-group col-md-4">
                             <label for="inputDay">Day</label>
-                            <input type="text" class="form-control" id="inputDay" placeholder="1">
+                            <input type="text" class="form-control dayInput" id="inputDay" placeholder="1">
                           </div>
                           <div class="form-group col-md-4">
                             <label for="inputYear">Year</label>
-                            <input type="text" class="form-control" id="inputYear" placeholder="2019">
+                            <input type="text" class="form-control yearInput" id="inputYear" placeholder="2019">
                           </div>
                     </div>
                     <h4>Task:</h4>
@@ -195,6 +210,12 @@
                                 });
                             </script>
                           </div>
+                        <div id="task-warning" class="alert alert-danger" role="alert">
+                            Please enter a task.
+                        </div>
+                        <div id="date-submit-warning" class="alert alert-danger" role="alert">
+                                Please enter a valid date.
+                            </div>
                     <button id="submit-task" class="btn btn-dark">Submit Task</button>
                 </form>
             </div>
@@ -209,7 +230,7 @@
 
     <!-- Optional JavaScript -->
     
-    <script src="search.js"></script>
+    <script src="date-test.js"></script>
     
     
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
